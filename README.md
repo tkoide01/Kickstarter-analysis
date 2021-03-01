@@ -14,9 +14,9 @@ Performing analysis on Kickstarter data to uncover trends
 Before we begin to analyse the dataset based on Launch Date and Goals, we needed resolve challenges as dataset were utilizing Unix Timestamps rather than Readable Format and also displaying Category and Subcategory in the same column. The followings steps are taken in order to analyze data with readable Launch Date and filter based on the theatre category;
 1. The Column J displays the launching timing of campaigns in Unix Timestamps format. In order to visualize the outcome based on readable Month unit, we added Column S with following function.
 
-`(S,i)=((((J,i)/60)/60)/24)+DATE(1970,1,1)`
+   `(S,i)=((((J,i)/60)/60)/24)+DATE(1970,1,1)`
 
-\*note that Ji and Si represent corresponding cells in J column and S column
+   \*note that Ji and Si represent corresponding cells in J column and S column
 
 2. As the Column P of the dataset displys both Category and Subcategory together, Text to Columns function in Data tab is utilized. The entries in Column P are split with "/" and added Column Q as Parent category and Column R as Sub Category.
 
