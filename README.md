@@ -29,7 +29,7 @@ Given the dataset can be filtered based on the Launch Date and Category, a pivot
 
 2. The followings fields/variables are utilized for Filters, Columns, Rows, and Values as shown in below screen shot. This pivot table allows us to see the number of Successful, failed, and canceled campaigns by each month. 
 
-   ![Screen Shot]()"PivotTable_Fields"
+   ![ScreenShot][1]
 
 3. In addition, the pivot table filtered data to "theater" Category and removed the Column Label of "lived" to omit campaign without the result yet. Then sort function is utilized to display data in the order of months. Below is the Pivot table generated.
 
@@ -95,3 +95,8 @@ As countermeasures, utilizing conditional format based on the goal dollar amount
   ![Chart3]() “Outcomes vs Goal with USD filtering”
   
   This result is different from the chart generated without filtering the dataset with USD, which mentioned earlier in the analysis.
+  
+  
+  
+[1]:
+resources/PivotTable_Fields.png "PivotTable Fields"
