@@ -17,13 +17,48 @@ Before we begin to analyse the dataset based on Launch Date and Goals, we needed
    `(S,i)=((((J,i)/60)/60)/24)+DATE(1970,1,1)`
 
    \*note that Ji and Si represent corresponding cells in J column and S column
-
+  In addition, we utilized `=YEAR()` functions in Column U to enable filtering data by launched year.
+  
 2. As the Column P of the dataset displys both Category and Subcategory together, Text to Columns function in Data tab is utilized. The entries in Column P are split with "/" and added Column Q as Parent category and Column R as Sub Category.
 
 ### Analysis of Outcomes Based on Launch Date
 
+Given the dataset can be filtered based on the Launch Date and Category, a pivot table and a line chart are utilized to visualize the correlation between the outcome of campaigns with their Launch Dates. Note that the outcomes are categorized in three states; successful, failed, and canceled. Successful campagin have raised fund above its goal and failed cmpaign have not. The followings steps were taken to visualize the date;
+
+1. Insert Pivot Table in a new sheet "Theatre Outcomes by Launch Date."
+
+2. The followings fields/variables are utilized for Filters, Columns, Rows, and Values as shown in below screen shot. This pivot table allows us to see the number of Successful, failed, and canceled campaigns by each month. 
+
+![Screen Shot]()"PivotTable_Fields"
+
+3. In addition, the pivot table filtered data to "theater" Category and removed the Column Label of "lived" to omit campaign without the result yet. Then sort function is utilized to display data in the order of months. Below is the Pivot table generated.
+
+![Pivot Table]()"Theatre_Outcomes_vs_Launch_PivotTable"
+
+4. Lastly, generate the line chart from the table using Pivot Chart function. The line chart "Theatre Outcomes Based on Launch Date" shows how "theatre" category campaigns' outcomes vary for each calender month as below image shows.
+
+![Line_Chart1]()"Theatre_Outcomes_vs_Launch"
+
+Now both the table and the line charts are available to draw analysis of how Launch Date impacts the outcomes.
 
 ### Analysis of Outcomes Based on Goals
+
+Next, a new table is created on a separate sheet "Outcomes Based on Goals" in order to analyze the correlation bewteen goal of campaigns and their outcomes. Below steps are taken to create a table and generate another line chart;
+
+1. On a new sheet, create a table with rows with certain range of goals. The Number of Successful, Number of Failed, Number of Canceled, Total Projects, Percentage Successful, Percentage Failed, and PErcentage Failed are utilized as columns.
+2. Then, input `COUNTIFS` functions as below to chart number of Successful, Failed and Canceled campaigns for each range of goals.
+
+`=COUNTIFS(Kickstarter!$D:$D,"<1000",Kickstarter!$F:$F,"successful",Kickstarter!$R:$R,"plays")`
+
+\* Note that criteria for inequal sign values and "successful" varies based on the cell of the table
+
+The table will show result as below after plotting each cell value and then calculate each percentage by dividing with Total Projects value for each corresponding row. Below is the resulted table.
+
+![Table1]()"Outcomes_vs_Goals_Table1"
+
+3. Lastly, generate a line chart based on the created table to visualize the trend of campaigns' outcome based on the range of goal dollar-amount. Ensure to specify the Percentage of Success, Failed and Canceled for Y-axis. Below is the resulted line chart.
+
+![Chart2]()"Outcomes_vs_Goals"
 
 
 ### Challenges and Difficulties Encountered
