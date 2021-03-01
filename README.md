@@ -33,11 +33,11 @@ Given the dataset can be filtered based on the Launch Date and Category, a pivot
 
 3. In addition, the pivot table filtered data to "theater" Category and removed the Column Label of "lived" to omit campaign without the result yet. Then sort function is utilized to display data in the order of months. Below is the Pivot table generated.
 
-   ![Pivot Table]()"Theatre_Outcomes_vs_Launch_PivotTable"
-
+   ![Pivot Table][2]
+   
 4. Lastly, generate the line chart from the table using Pivot Chart function. The line chart "Theatre Outcomes Based on Launch Date" shows how "theatre" category campaigns' outcomes vary for each calender month as below image shows.
 
-   ![Line_Chart1]()"Theatre_Outcomes_vs_Launch"
+   ![Chart1][3]
 
 Now both the table and the line charts are available to draw analysis of how Launch Date impacts the outcomes.
 
@@ -54,11 +54,11 @@ Next, a new table is created on a separate sheet "Outcomes Based on Goals" in or
 
    The table will show result as below after plotting each cell value and then calculate each percentage by dividing with Total Projects value for each corresponding row. Below is the resulted table.
 
-   ![Table1]()"Outcomes_vs_Goals_Table1"
+   ![Table1][4]
 
 3. Lastly, generate a line chart based on the created table to visualize the trend of campaigns' outcome based on the range of goal dollar-amount. Ensure to specify the Percentage of Success, Failed and Canceled for Y-axis. Below is the resulted line chart.
 
-   ![Chart2]()"Outcomes_vs_Goals"
+   ![Chart2][5]
  
 
 ### Challenges and Difficulties Encountered
@@ -72,7 +72,8 @@ As countermeasures, utilizing conditional format based on the goal dollar amount
   
   Based on the line chart outputted from the analysis, we can draw two conclusions in regard to the outcomes of Theatre campaigns based on their launch dates;
  
-   ![Chart1]() “Theatre Outcomes vs Launch”
+   ![Chart1][3]
+   
   1.	The month of May and June are the successful month for Theatre campaigns to launch. Thus one should plan to launch campaigns during these two months to aim for successful result. 
   2.	On the other hand, the number of failed theatre campaigns are consistent throughout the year from 30 to 50 cases. Thus analyzing the trend of failing theatre campaigns may require variables other than launch dates.
 
@@ -81,7 +82,7 @@ As countermeasures, utilizing conditional format based on the goal dollar amount
   Based on the line chart outputted from the analysis, we can reach to the below conclusion in regards to outcomes based on goals;
    + The most successful campaigns are the ones with goal “less than 1000” with the success rate of 76%. The success rate of the campaign declines as the campaign goal dollar amount increases with exception of campaigns that fall on “30000 to 39999” and “40000 to 44999” that resulted success rate of 67%. Therefore, it is less risky to keep your campaign goal to below $1,5000 as the Percentage Failed outnumbers the Percentage Successful from this point as shown on the below line chart.
 
-  ![Chart2]() “Outcomes Based on Goal”
+  ![Chart2][5]
 
 - What are some limitations of this dataset?
   
@@ -92,7 +93,7 @@ As countermeasures, utilizing conditional format based on the goal dollar amount
     
     Note that Analysis of Outcomes Based on Goals **did not filter the campaigns based on the currency of funding goals**. This may cause some inaccuracy to the plotting of each data point as Y-axis is separating by dollar-based goal value. For examples GDP and NZD are different from USD by more than **30%** of its value. As below line chart shows, the most successful Dollar-based goal is the _“35000 to 3999”_ hitting 80%. 
   
-  ![Chart3]() “Outcomes vs Goal with USD filtering”
+  ![Chart3][6] 
   
   This result is different from the chart generated without filtering the dataset with USD, which mentioned earlier in the analysis.
   
@@ -100,3 +101,13 @@ As countermeasures, utilizing conditional format based on the goal dollar amount
   
 [1]:
 resources/PivotTable_Fields.png "PivotTable Fields"
+[2]:
+resources/Theatre_Outcomes_vs_Launch_PivotTable.png "Theatre_Outcomes_vs_Launch_PivotTable"
+[3]:
+resources/Theatre_Outcomes_vs_Launch.png "Theatre_Outcomes_vs_Launch"
+[4]:
+resources/Outcomes_vs_Goals_Table1.png "Outcomes_vs_Goals_Table1"
+[5]:
+resources/Outcomes_vs_Goals.png "Outcomes_vs_Goals"
+[6]:
+resources/Outcomes_vs_Goals_withUSD.png “Outcomes vs Goal with USD filtering”
