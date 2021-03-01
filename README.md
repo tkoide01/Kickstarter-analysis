@@ -29,15 +29,15 @@ Given the dataset can be filtered based on the Launch Date and Category, a pivot
 
 2. The followings fields/variables are utilized for Filters, Columns, Rows, and Values as shown in below screen shot. This pivot table allows us to see the number of Successful, failed, and canceled campaigns by each month. 
 
-![Screen Shot]()"PivotTable_Fields"
+   ![Screen Shot]()"PivotTable_Fields"
 
 3. In addition, the pivot table filtered data to "theater" Category and removed the Column Label of "lived" to omit campaign without the result yet. Then sort function is utilized to display data in the order of months. Below is the Pivot table generated.
 
-![Pivot Table]()"Theatre_Outcomes_vs_Launch_PivotTable"
+   ![Pivot Table]()"Theatre_Outcomes_vs_Launch_PivotTable"
 
 4. Lastly, generate the line chart from the table using Pivot Chart function. The line chart "Theatre Outcomes Based on Launch Date" shows how "theatre" category campaigns' outcomes vary for each calender month as below image shows.
 
-![Line_Chart1]()"Theatre_Outcomes_vs_Launch"
+   ![Line_Chart1]()"Theatre_Outcomes_vs_Launch"
 
 Now both the table and the line charts are available to draw analysis of how Launch Date impacts the outcomes.
 
@@ -45,25 +45,26 @@ Now both the table and the line charts are available to draw analysis of how Lau
 
 Next, a new table is created on a separate sheet "Outcomes Based on Goals" in order to analyze the correlation bewteen goal of campaigns and their outcomes. Below steps are taken to create a table and generate another line chart;
 
-1. On a new sheet, create a table with rows with certain range of goals. The Number of Successful, Number of Failed, Number of Canceled, Total Projects, Percentage Successful, Percentage Failed, and PErcentage Failed are utilized as columns.
+1. On a new sheet, create a table with rows with certain range of goals. The Number of Successful, Number of Failed, Number of Canceled, Total Projects, Percentage Successful, Percentage Failed, and Percentage Failed are utilized as columns.
 2. Then, input `COUNTIFS` functions as below to chart number of Successful, Failed and Canceled campaigns for each range of goals.
 
-`=COUNTIFS(Kickstarter!$D:$D,"<1000",Kickstarter!$F:$F,"successful",Kickstarter!$R:$R,"plays")`
+   `=COUNTIFS(Kickstarter!$D:$D,"<1000",Kickstarter!$F:$F,"successful",Kickstarter!$R:$R,"plays")`
 
-\* Note that criteria for inequal sign values and "successful" varies based on the cell of the table
+   \* Note that criteria for inequal sign values and "successful" varies based on the cell of the table
 
-The table will show result as below after plotting each cell value and then calculate each percentage by dividing with Total Projects value for each corresponding row. Below is the resulted table.
+   The table will show result as below after plotting each cell value and then calculate each percentage by dividing with Total Projects value for each corresponding row. Below is the resulted table.
 
-![Table1]()"Outcomes_vs_Goals_Table1"
+   ![Table1]()"Outcomes_vs_Goals_Table1"
 
 3. Lastly, generate a line chart based on the created table to visualize the trend of campaigns' outcome based on the range of goal dollar-amount. Ensure to specify the Percentage of Success, Failed and Canceled for Y-axis. Below is the resulted line chart.
 
-![Chart2]()"Outcomes_vs_Goals"
-
+   ![Chart2]()"Outcomes_vs_Goals"
+ 
 
 ### Challenges and Difficulties Encountered
+Throught the analysis taken above, the biggest obstacle was creating the Outcomes based on Goals table using `COUNTIFS` function. Since function needs to be modified by changing the inequal values criteria or the type of outcome criteria based on each column and row combination, it took time to carefully type each function. Utilizing $ sign to specify the columns of Kickstarter sheet did help, but the rest of change could not utilize a dragging function.
 
-
+As countermeasures, utilizing conditional format based on the goal dollar amount then color filtering the original dataset could have been a quicker approach. We can also filter the dataset by outcome as well then copy and paste the resulted dataset for countring funtion. 
 
 ## Results
 
@@ -83,6 +84,9 @@ The table will show result as below after plotting each cell value and then calc
   ![Chart2]() “Outcomes Based on Goal”
 
 - What are some limitations of this dataset?
+  
+   Through conducting the analysis of both Outcomes based on Launch Date and Outcomes Based on Goals, I encountered several limitations in data available.
+   + In the case of Outcomes based on Goals analysis, there are limited number of campaigns with its goal more than 1000. The sum of those campaigns is only 158 and equal to 15% of the total theatre projects recorded. Which means, while the percentage of success and fail is calculated with 85% of data for three segmentations (Less than 1000, 1000 to 4999, and 5000 to 9999), while only 15% of date is available to generate results of 9 different segmentations (1000 and above). In fact, the success rate for the campaign plotted under “45000 to 49999” is 0% because there is only one available data that failed. Since the dataset is limited with Theatre campaigns with goals higher than 1000, the current trend we see that success rate declines as campaign goal increases may easily change with more entry of data.
 
 - What are some other possible tables and/or graphs that we could create?
     
