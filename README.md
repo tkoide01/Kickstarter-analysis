@@ -93,7 +93,7 @@ As countermeasures, utilizing conditional format based on the goal dollar amount
     
     Note that Analysis of Outcomes Based on Goals **did not filter the campaigns based on the currency of funding goals**. This may cause some inaccuracy to the plotting of each data point as Y-axis is separating by dollar-based goal value. For examples GDP and NZD are different from USD by more than **30%** of its value. As below line chart shows, the most successful Dollar-based goal is the _“35000 to 3999”_ hitting 80%. 
   
-  ![Chart3][6] 
+  ![Chart3][6]
   
   This result is different from the chart generated without filtering the dataset with USD, which mentioned earlier in the analysis.
   
@@ -110,4 +110,4 @@ resources/Outcomes_vs_Goals_Table1.png "Outcomes_vs_Goals_Table1"
 [5]:
 resources/Outcomes_vs_Goals.png "Outcomes_vs_Goals"
 [6]:
-resources/Outcomes_vs_Goals_withUSD.png “Outcomes vs Goal with USD filtering”
+resources/Outcomes_vs_Goals_withUSD.png
