@@ -110,4 +110,4 @@ resources/Outcomes_vs_Goals_Table1.png "Outcomes_vs_Goals_Table1"
 [5]:
 resources/Outcomes_vs_Goals.png "Outcomes_vs_Goals"
 [6]:
-resources/Outcomes_vs_Goals_withUSD.png
+resources/Outcomes_vs_Goals_withUSD.png "Outcomes_vs_Goals with USD filtering"
